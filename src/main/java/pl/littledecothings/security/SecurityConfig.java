@@ -2,8 +2,11 @@ package pl.littledecothings.security;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+
+import javax.servlet.http.HttpServlet;
 
 @Configuration
 @EnableWebSecurity
@@ -12,8 +15,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     public void configure(AuthenticationManagerBuilder authenticationManager) throws Exception {
         authenticationManager.inMemoryAuthentication()
-                .withUser("user1").password("{noop}user123").roles("USER")
+                .withUser("dekoartka").password("dekoartka").roles("ADMIN");
+    }
+
+    protected void configure (HttpSecurity httpSecurity) throws Exception {
+        httpSecurity.authorizeRequests()
+                .antMatchers("/").permitAll()
+                .antMatchers("/admin").hasRole("ADMIN")
                 .and()
-                .withUser("admin1").password("{noop}admin123").roles("ADMIN");
+                .formLogin();
     }
 }
