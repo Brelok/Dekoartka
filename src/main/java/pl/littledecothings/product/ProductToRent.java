@@ -3,6 +3,7 @@ package pl.littledecothings.product;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.Type;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,15 +14,17 @@ import javax.persistence.Id;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Product {
+public class ProductToRent {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Type(type = "text")
     private String name;
+
+    @Type(type = "text")
     private String description;
-    private boolean status;
 
     @Override
     public String toString() {
