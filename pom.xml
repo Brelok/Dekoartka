@@ -64,6 +64,7 @@
             <version>2.2.2</version>
             <scope>compile</scope>
         </dependency>
+
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
