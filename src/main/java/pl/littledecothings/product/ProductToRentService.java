@@ -14,4 +14,8 @@ public class ProductToRentService {
     public ProductToRentService(ProductToRentRepository productToRentRepository) {
         this.productToRentRepository = productToRentRepository;
     }
+
+    public ProductToRent findOne (Long id){
+        return productToRentRepository.findOne(id);
+    }
 }

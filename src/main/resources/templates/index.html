@@ -120,7 +120,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <div class="py-xl-5 py-lg-3">
         <div class="d-xl-flex about-grids">
             <div class="col-xl-4 about-left p-0">
-                <img th:src="@{/images/love.jpg}" alt="" class="img-fluid"/>
+                <img th:src="@{/images/sala_2.jpg}" alt="" class="img-fluid"/>
             </div>
             <div class="col-xl-8 about-right border-bottom">
                 <h3 class="mb-3" th:text="#{firstThing}">First thing</h3>
@@ -130,7 +130,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         </div>
         <div class="d-xl-flex about-grids flex-row-reverse">
             <div class="col-xl-4 about-left p-0">
-                <img th:src="@{/images/love.jpg}" alt="" class="img-fluid"/>
+                <img th:src="@{/images/gift.jpg}" alt="" class="img-fluid"/>
             </div>
             <div class="col-xl-8 about-right border-bottom">
                 <h3 class="mb-3" th:text="#{secondThing}">Second thing</h3>
@@ -264,7 +264,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <p class="sub-tittle text-center mt-3 mb-sm-5 mb-4" th:text="#{galleryAbout}">about gallery</p>
         <div class="row no-gutters">
             <div class="col-md-3 gal-img">
-                <a href="#gal1"><img src="../static/images/g1.jpg" alt="Gallery Image" class="img-fluid"></a>
+                <a href="#gal1"><img th:src="@{/images/paleta_mała.jpg}" alt="Gallery Image" class="img-fluid"></a>
             </div>
             <div class="col-md-3 gal-img">
                 <a href="#gal5"><img src="../static/images/g5.jpg" alt="Gallery Image" class="img-fluid"></a>
@@ -288,9 +288,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <!-- popup-->
         <div id="gal1" class="pop-overlay animate">
             <div class="popup">
-                <img src="../static/images/g1.jpg" alt="Popup Image" class="img-fluid"/>
-                <p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat
-                    dolor.</p>
+                <img th:src="@{/images/paleta_mała.jpg}" alt="Popup Image" class="img-fluid"/>
+                <p class="mt-4" th:text="#{image_1(${productToRent.description})}">image_1</p>
                 <a class="close" href="#gallery">&times;</a>
             </div>
         </div>
@@ -495,8 +494,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </div>
             <div class="col-md-6 footer-right-info text-right offset-xl-1 mt-md-0 mt-5">
                 <h6 th:text="#{contact}">Contact Us</h6>
-                <address class="ad-info mt-lg-5 mt-4">
-                    <br> Agnieszka Pradelok
+                <address class="ad-info mt-lg-5 mt-4">Agnieszka Pradelok
                     <br>
                     <a href="tel:+48783272511">783-272-511</a>
                 </address>
