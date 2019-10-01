@@ -40,6 +40,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Tangerine:400,700" rel="stylesheet">
     <!-- //Web-Fonts -->
+    <script src="https://kit.fontawesome.com/d2ab83011e.js"></script>
+
 </head>
 
 <body>
@@ -73,23 +75,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- about -->
 <section class="about-2 py-5">
     <div class="container py-xl-5 py-lg-3">
-        <h3 class="tittle text-center">About Us</h3>
-        <p class="sub-tittle text-center mt-3 mb-sm-5 mb-4">Sed do eiusmod tempor incididunt ut labore et dolore
-            magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+        <h3 class="tittle text-center" th:text="#{aboutUs}">About Us</h3>
+        <p class="sub-tittle text-center mt-3 mb-sm-5 mb-4" th:text="#{aboutUsMore}">aboutUsMore</p>
         <div class="row">
             <div class="col-lg-6 about-left-inner">
-                <h3>Cras ut diam placerat, placerat justo sed, lacinia risus.</h3>
-                <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut mollis turpis, sed tincidunt
-                    purus.</h5>
-                <p class="mt-4">Duis nisi sapien, elementum finibus fermentum eget, aliquet leo. Mauris hendrerit
-                    vel ex.
-                    Quisque vitae luctus massa. Phasellus sed aliquam leo. Vestibulum ullamcorper a massa eu
-                    fringilla. Integer ultrices finibus sed nisi.<br>
-                    In convallis felis dapibus sit amet. Donec a arcu et sapien hendrerit accumsan asased.</p>
+                <h3 th:text="#{tittle}">tiitle</h3>
+                <p class="mt-4" th:text="#{quoteAbout}">quoteAbout</p>
             </div>
             <div class="col-lg-6 about-right-inner text-center mt-lg-0 mt-5">
-                <img src="../static/images/ab3.jpg" alt="" class="img-fluid img-border"/>
+                <img th:src="@{/images/candy_bar.jpg}" alt="candy bar" class="img-fluid img-border"/>
             </div>
         </div>
 
@@ -100,59 +94,53 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- team -->
 <section class="team py-5" id="team">
     <div class="container pb-xl-5 pb-lg-3">
-        <h3 class="tittle text-center">Our Team</h3>
-        <p class="sub-tittle text-center mt-3 mb-sm-5 mb-4">Sed do eiusmod tempor incididunt ut labore et dolore
-            magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+        <h3 class="tittle text-center" th:text="#{weAre}">Our Team</h3>
+        <p class="sub-tittle text-center mt-3 mb-sm-5 mb-4" th:text="#{weAreAbout}">we are more</p>
         <div class="row team-grid">
             <div class="col-lg-3 col-sm-6">
                 <div class="box13">
                     <img th:src="@{/images/aga.jpg}" class="img-fluid img-thumbnail" alt=""/>
                     <div class="box-content">
                         <h3 class="title">Agnieszka</h3>
-                        <span class="post" th:text="#{roleAga}">Role</span>
+                        <span class="post" th:text="#{roleDekoratorka}">Role</span>
                         <ul class="social">
-                            <li><a th:href="@{https://www.facebook.com/agnieszka.rybicka.9}" target="_blank"><span class="fa fa-facebook"></span></a></li>
-                            <li><a th:href="@{https://www.instagram.com/little_deco_things/}" target="_blank"><span class="fa fa-instagram"></span></a></li>
+                            <li><a th:href="@{https://www.instagram.com/little_deco_things/}" target="_blank"><span
+                                    class='fab fa-instagram'></span></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6 mt-sm-0 mt-4">
                 <div class="box13">
-                    <img src="../static/images/t2.jpg" class="img-fluid img-thumbnail" alt=""/>
+                    <img th:src="@{/images/karola.jpg}" class="img-fluid img-thumbnail" alt=""/>
                     <div class="box-content">
-                        <h3 class="title">Kristiana</h3>
-                        <span class="post">role in detail</span>
+                        <h3 class="title">Karolina</h3>
+                        <span class="post" th:text="#{roleDekoratorka}">Role</span>
                         <ul class="social">
-                            <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                            <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                            <li><a th:href="@{https://www.instagram.com/kajjakowa/}" target="_blank"><span
+                                    class='fab fa-instagram'></span></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6 mt-lg-0 mt-4">
                 <div class="box13">
-                    <img src="../static/images/t3.jpg" class="img-fluid img-thumbnail" alt=""/>
+                    <img th:src="@{/images/paweł.jpg}" class="img-fluid img-thumbnail" alt=""/>
                     <div class="box-content">
-                        <h3 class="title">Thomson</h3>
-                        <span class="post">role in detail</span>
-                        <ul class="social">
-                            <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                            <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                        </ul>
+                        <h3 class="title">Paweł</h3>
+                        <span class="post" th:text="#{roleHelper}">Role</span>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6 mt-lg-0 mt-4">
                 <div class="box13">
-                    <img src="../static/images/t4.jpg" class="img-fluid img-thumbnail" alt=""/>
+                    <img th:src="@{/images/wafel.jpg}" class="img-fluid img-thumbnail" alt=""/>
                     <div class="box-content">
-                        <h3 class="title">Watson</h3>
-                        <span class="post">role in detail</span>
+                        <h3 class="title">Wafel</h3>
+                        <span class="post" th:text="#{roleDog}">Role</span>
                         <ul class="social">
-                            <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                            <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                            <li><a th:href="@{https://www.instagram.com/the_mr_wafel/}" target="_blank"><span
+                                    class='fab fa-instagram'></span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -168,16 +156,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <div class="container py-xl-5 py-lg-3">
         <div class="row py-4">
             <div class="col-md-12">
-                <h5 class="text-wh text-capitalize font-weight-bold let mb-4">Nature always wears the colors of the
-                    spirit.</h5>
-                <p>Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.
-                    Vestibulum at dui
-                    nunc. Nulla viverra pharetra sem, eget pulvinar neque pharetra ac int. lorem ipsum Vestibulum.
-                    placerat placerat
-                    dolor. Vestibulum at dui nunc. Nullam eu elit neque lectus.</p>
+                <h5 class="text-wh text-capitalize font-weight-bold let mb-4" th:text="#{quote}">quote</h5>
+                <p th:text="#{quoteAbout}">quote About</p>
                 <div class="text-center mt-sm-5 mt-4">
-                    <a href="about.html" class="mr-2 work btn">Read More</a>
-                    <a href="contact.html" class="work btn">Contact Us</a>
+                    <a th:href="@{/about}" class="mr-2 work btn" th:text="#{more}">Read More</a>
+                    <a th:href="@{/contact}" class="work btn" th:text="#{contact}">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -192,47 +175,31 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div class="col-xl-5 col-md-6 footer-left-info text-left">
                 <div class="logo-footer">
                     <h2>
-                        <a href="index.html">Natural</a>
+                        <img th:src="@{/images/logo.png}" alt="logo" class="img-fluid"/>
                     </h2>
                 </div>
-                <p class="mt-lg-5 mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim
-                    neque
-                    condimentum
-                    lacus dapibus.consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus.
+                <p class="mt-lg-5 mt-4">
                 </p>
             </div>
             <div class="col-md-6 footer-right-info text-right offset-xl-1 mt-md-0 mt-5">
-                <h6>Get In Touch</h6>
-                <address class="ad-info mt-lg-5 mt-4">
-                    <strong>Twitter, Inc.</strong>
-                    <br> 1355 Market St, Suite 900
-                    <br> San Francisco, CA 94103
-                    <br>
-                    <abbr title="Phone">P:</abbr> (123) 456-7890
-                </address>
+                <h6 th:text="#{tittle}">Tittle</h6>
+                <!--                <address class="ad-info mt-lg-5 mt-4">Agnieszka Pradelok-->
+                <!--                    <br>-->
+                <!--                    <a href="tel:+48783272511">783-272-511</a>-->
+                <!--                </address>-->
             </div>
         </div>
         <!-- social icons -->
         <div class="social-icons-footer social-w3pvt-footer border-top text-center pt-md-5 pt-4 mt-md-5 mt-4">
             <ul class="list-unstyled">
                 <li>
-                    <a href="#">
-                        <span class="fa fa-facebook"></span>
+                    <a th:href="@{https://www.facebook.com/agnieszka.rybicka.9}" target="_blank">
+                        <span class="fab fa-facebook-f"></span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <span class="fa fa-twitter"></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="fa fa-dribbble"></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="fa fa-instagram"></span>
+                    <a th:href="@{https://www.instagram.com/little_deco_things/}" target="_blank">
+                        <span class="fab fa-instagram"></span>
                     </a>
                 </li>
             </ul>
@@ -253,6 +220,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <span class="fa fa-chevron-circle-up" aria-hidden="true"></span>
 </a>
 <!-- //move top icon -->
+
 
 </body>
 
