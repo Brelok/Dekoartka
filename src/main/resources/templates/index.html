@@ -120,44 +120,44 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="py-xl-5 py-lg-3">
 			<div class="d-xl-flex about-grids">
 				<div class="col-xl-4 about-left p-0">
-					<img th:src="@{/images/ab3.jpg}" alt="" class="img-fluid" />
+					<img th:src="@{/images/love.jpg}" alt="" class="img-fluid" />
 				</div>
 				<div class="col-xl-8 about-right border-bottom">
-					<h3 class="mb-3">Never Stop Exploring</h3>
+					<h3 class="mb-3" th:text="#{firstThing}">First thing</h3>
 					<p class="mb-3">Integer pulvinar leo id viverra feugiat. Pellentesque libero ut justo, semper at
 						tempus vel, ultrices in ligula. Lorem ipsum dolor sit amet sed do
 						eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 					<p>Semper at tempus vel, ultrices in ligula. Integer pulvinar leo quis
 						nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					<a href="#" class="btn button-style-3">Learn More</a>
+					<a href="#" class="btn button-style-3" th:text="#{more}">Learn More</a>
 				</div>
 			</div>
 			<div class="d-xl-flex about-grids flex-row-reverse">
 				<div class="col-xl-4 about-left p-0">
-					<img src="../static/images/ab.jpg" alt="" class="img-fluid" />
+					<img th:src="@{/images/love.jpg}" alt="" class="img-fluid" />
 				</div>
 				<div class="col-xl-8 about-right border-bottom">
-					<h3 class="mb-3">Never Stop Exploring</h3>
+					<h3 class="mb-3" th:text="#{secondThing}">Second thing</h3>
 					<p class="mb-3">Integer pulvinar leo id viverra feugiat. Pellentesque libero ut justo, semper at
 						tempus vel, ultrices in ligula. Lorem ipsum dolor sit amet sed do
 						eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 					<p>Semper at tempus vel, ultrices in ligula. Integer pulvinar leo quis
 						nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					<a href="#" class="btn button-style-3">Learn More</a>
+					<a href="#" class="btn button-style-3" th:text="#{more}">Learn More</a>
 				</div>
 			</div>
 			<div class="d-xl-flex about-grids">
 				<div class="col-xl-4 about-left p-0">
-					<img src="../static/images/ab2.jpg" alt="" class="img-fluid" />
+					<img th:src="@{/images/love.jpg}" alt="" class="img-fluid" />
 				</div>
 				<div class="col-xl-8 about-right">
-					<h3 class="mb-3">Never Stop Exploring</h3>
+					<h3 class="mb-3" th:text="#{thirdThing}">Third thing</h3>
 					<p class="mb-3">Integer pulvinar leo id viverra feugiat. Pellentesque libero ut justo, semper at
 						tempus vel, ultrices in ligula. Lorem ipsum dolor sit amet sed do
 						eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 					<p>Semper at tempus vel, ultrices in ligula. Integer pulvinar leo quis
 						nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					<a href="#" class="btn button-style-3">Learn More</a>
+					<a href="#" class="btn button-style-3" th:text="#{more}">Learn More</a>
 				</div>
 			</div>
 		</div>
@@ -167,19 +167,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- services -->
 	<section class="services text-center py-5" id="services">
 		<div class="container">
-			<h3 class="tittle text-center">Our Services</h3>
-			<p class="sub-tittle text-center mt-3 mb-sm-5 mb-4">Sed do eiusmod tempor incididunt ut labore et dolore
-				magna
-				aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+			<h3 class="tittle text-center" th:text="#{services}">Our Services</h3>
+			<p class="sub-tittle text-center mt-3 mb-sm-5 mb-4" th:text="#{servicesMore}">More about services</p>
 			<div class="row ser-sec-1">
 				<div class="col-md-4 ser-w3ls-wthree">
 					<div class="icon">
-						<span class="fa fa-lightbulb-o"></span>
+<!--						<span class="fa fa-lightbulb-o"></span>-->
+						<span><img th:src="@{/images/l.jpg}" alt=""/></span>
 					</div>
 					<!-- Icon ends here -->
 					<div class="service-content">
-						<h5>Service 01</h5>
-						<p class="serp">
+						<h5 th:text="#{service1}">Service 01</h5>
+						<p class="serp" th:text="#{service1about}">
 							Quisque sagittis lacus eu lorem sodalesd enean adipiscing.
 						</p>
 					</div>
@@ -190,8 +189,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 					<!-- Icon ends here -->
 					<div class="service-content">
-						<h5>Service 02</h5>
-						<p class="serp">
+						<h5 th:text="#{service2}">Service 02</h5>
+						<p class="serp" th:text="#{service2about}">
 							Quisque sagittis lacus eu lorem sodalesd enean adipiscing.
 						</p>
 					</div>
@@ -202,8 +201,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 					<!-- .Icon ends here -->
 					<div class="service-content">
-						<h5>Service 03</h5>
-						<p class="serp">
+						<h5 th:text="#{service3}">Service 03</h5>
+						<p class="serp" th:text="#{service3about}">
 							Quisque sagittis lacus eu lorem sodalesd enean adipiscing.
 						</p>
 					</div>
@@ -216,8 +215,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 					<!-- Icon ends here -->
 					<div class="service-content">
-						<h5>Service 04</h5>
-						<p class="serp">
+						<h5 th:text="#{service4}">Service 04</h5>
+						<p class="serp" th:text="#{service4about}">
 							Quisque sagittis lacus eu lorem sodalesd enean adipiscing.
 						</p>
 					</div>
@@ -228,8 +227,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 					<!-- Icon ends here -->
 					<div class="service-content">
-						<h5>Service 05</h5>
-						<p class="serp">
+						<h5 th:text="#{service5}">Service 05</h5>
+						<p class="serp" th:text="#{service5about}">
 							Quisque sagittis lacus eu lorem sodalesd enean adipiscing.
 						</p>
 					</div>
@@ -240,8 +239,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 					<!-- .Icon ends here -->
 					<div class="service-content">
-						<h5>Service 06</h5>
-						<p class="serp">
+						<h5 th:text="#{service6}">Service 06</h5>
+						<p class="serp" th:text="#{service6about}">
 							Quisque sagittis lacus eu lorem sodalesd enean adipiscing.
 						</p>
 					</div>
@@ -254,8 +253,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 					<!-- Icon ends here -->
 					<div class="service-content">
-						<h5>Service 07</h5>
-						<p class="serp">
+						<h5 th:text="#{service7}">Service 07</h5>
+						<p class="serp" th:text="#{service7about}">
 							Quisque sagittis lacus eu lorem sodalesd enean adipiscing.
 						</p>
 					</div>
@@ -266,8 +265,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 					<!-- Icon ends here -->
 					<div class="service-content">
-						<h5>Service 08</h5>
-						<p class="serp">
+						<h5 th:text="#{service8}">Service 08</h5>
+						<p class="serp" th:text="#{service8about}">
 							Quisque sagittis lacus eu lorem sodalesd enean adipiscing.
 						</p>
 					</div>
@@ -278,8 +277,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 					<!-- .Icon ends here -->
 					<div class="service-content">
-						<h5>Service 09</h5>
-						<p class="serp">
+						<h5 th:text="#{service9}">Service 09</h5>
+						<p class="serp" th:text="#{service9about}">
 							Quisque sagittis lacus eu lorem sodalesd enean adipiscing.
 						</p>
 					</div>
@@ -292,7 +291,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- gallery -->
 	<div class="gallery py-5 text-center" id="gallery">
 		<div class="py-xl-5 py-lg-3">
-			<h3 class="tittle text-center">Our Gallery</h3>
+			<h3 class="tittle text-center" th:text="#{gallery}">Our Gallery</h3>
 			<p class="sub-tittle text-center mt-3 mb-sm-5 mb-4">Sed do eiusmod tempor incididunt ut labore et
 				dolore
 				magna
@@ -385,115 +384,115 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</div>
 	<!-- //gallery -->
 
-	<!-- testimonials -->
-	<section class="testimonials py-5 bg-li" id="testi">
-		<div class="container py-xl-5 py-lg-3">
-			<h3 class="tittle text-center">Testimonials</h3>
-			<p class="sub-tittle text-center mt-3 mb-sm-5 mb-4">Sed do eiusmod tempor incididunt ut labore et
-				dolore
-				magna
-				aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-			<div class="row text-center mt-4">
-				<div class="col-lg-4 test-info">
-					<p><span class="fa fa-quote-left mr-1"></span> Lorem Ipsum has been the industry's standard since
-						the
-						1500s. Praesent ullamcorper dui turpis.Nulla non laoreet eleifend. <span
-							class="fa fa-quote-right ml-1"></span></p>
-					<div class="test-img mb-3">
-						<img src="../static/images/te2.jpg" class="img-fluid" alt="user-image">
-					</div>
-					<h3 class="my-md-2 my-3">Jenifer Burns</h3>
-					<ul class="list-unstyled w3layouts-icons">
-						<li>
-							<a href="#">
-								<span class="fa fa-star"></span>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<span class="fa fa-star"></span>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<span class="fa fa-star"></span>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<span class="fa fa-star-half-o"></span>
-							</a>
-						</li>
-					</ul>
-				</div>
-				<div class="col-lg-4 test-info mt-lg-0 mt-5">
-					<p><span class="fa fa-quote-left mr-1"></span> Lorem Ipsum has been the industry's standard since
-						the
-						1500s. Praesent ullamcorper dui turpis.Nulla non laoreet eleifend. <span
-							class="fa fa-quote-right ml-1"></span></p>
-					<div class="test-img mb-3">
-						<img src="../static/images/te3.jpg" class="img-fluid" alt="user-image">
-					</div>
-					<h3 class="my-md-2 my-3"> Abraham Smith</h3>
-					<ul class="list-unstyled w3layouts-icons">
-						<li>
-							<a href="#">
-								<span class="fa fa-star"></span>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<span class="fa fa-star"></span>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<span class="fa fa-star"></span>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<span class="fa fa-star-half-o"></span>
-							</a>
-						</li>
-					</ul>
-				</div>
-				<div class="col-lg-4 test-info mt-lg-0 mt-5">
-					<p><span class="fa fa-quote-left mr-1"></span> Lorem Ipsum has been the industry's standard since
-						the
-						1500s. Praesent ullamcorper dui turpis.Nulla non laoreet eleifend. <span
-							class="fa fa-quote-right ml-1"></span></p>
-					<div class="test-img mb-3">
-						<img src="../static/images/te1.jpg" class="img-fluid" alt="user-image">
-					</div>
-					<h3 class="my-md-2 my-3">Jenifer Burns</h3>
-					<ul class="list-unstyled w3layouts-icons">
-						<li>
-							<a href="#">
-								<span class="fa fa-star"></span>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<span class="fa fa-star"></span>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<span class="fa fa-star"></span>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<span class="fa fa-star-half-o"></span>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- //testimonials -->
+<!--	&lt;!&ndash; testimonials &ndash;&gt;-->
+<!--	<section class="testimonials py-5 bg-li" id="testi">-->
+<!--		<div class="container py-xl-5 py-lg-3">-->
+<!--			<h3 class="tittle text-center">Testimonials</h3>-->
+<!--			<p class="sub-tittle text-center mt-3 mb-sm-5 mb-4">Sed do eiusmod tempor incididunt ut labore et-->
+<!--				dolore-->
+<!--				magna-->
+<!--				aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>-->
+<!--			<div class="row text-center mt-4">-->
+<!--				<div class="col-lg-4 test-info">-->
+<!--					<p><span class="fa fa-quote-left mr-1"></span> Lorem Ipsum has been the industry's standard since-->
+<!--						the-->
+<!--						1500s. Praesent ullamcorper dui turpis.Nulla non laoreet eleifend. <span-->
+<!--							class="fa fa-quote-right ml-1"></span></p>-->
+<!--					<div class="test-img mb-3">-->
+<!--						<img src="../static/images/te2.jpg" class="img-fluid" alt="user-image">-->
+<!--					</div>-->
+<!--					<h3 class="my-md-2 my-3">Jenifer Burns</h3>-->
+<!--					<ul class="list-unstyled w3layouts-icons">-->
+<!--						<li>-->
+<!--							<a href="#">-->
+<!--								<span class="fa fa-star"></span>-->
+<!--							</a>-->
+<!--						</li>-->
+<!--						<li>-->
+<!--							<a href="#">-->
+<!--								<span class="fa fa-star"></span>-->
+<!--							</a>-->
+<!--						</li>-->
+<!--						<li>-->
+<!--							<a href="#">-->
+<!--								<span class="fa fa-star"></span>-->
+<!--							</a>-->
+<!--						</li>-->
+<!--						<li>-->
+<!--							<a href="#">-->
+<!--								<span class="fa fa-star-half-o"></span>-->
+<!--							</a>-->
+<!--						</li>-->
+<!--					</ul>-->
+<!--				</div>-->
+<!--				<div class="col-lg-4 test-info mt-lg-0 mt-5">-->
+<!--					<p><span class="fa fa-quote-left mr-1"></span> Lorem Ipsum has been the industry's standard since-->
+<!--						the-->
+<!--						1500s. Praesent ullamcorper dui turpis.Nulla non laoreet eleifend. <span-->
+<!--							class="fa fa-quote-right ml-1"></span></p>-->
+<!--					<div class="test-img mb-3">-->
+<!--						<img src="../static/images/te3.jpg" class="img-fluid" alt="user-image">-->
+<!--					</div>-->
+<!--					<h3 class="my-md-2 my-3"> Abraham Smith</h3>-->
+<!--					<ul class="list-unstyled w3layouts-icons">-->
+<!--						<li>-->
+<!--							<a href="#">-->
+<!--								<span class="fa fa-star"></span>-->
+<!--							</a>-->
+<!--						</li>-->
+<!--						<li>-->
+<!--							<a href="#">-->
+<!--								<span class="fa fa-star"></span>-->
+<!--							</a>-->
+<!--						</li>-->
+<!--						<li>-->
+<!--							<a href="#">-->
+<!--								<span class="fa fa-star"></span>-->
+<!--							</a>-->
+<!--						</li>-->
+<!--						<li>-->
+<!--							<a href="#">-->
+<!--								<span class="fa fa-star-half-o"></span>-->
+<!--							</a>-->
+<!--						</li>-->
+<!--					</ul>-->
+<!--				</div>-->
+<!--				<div class="col-lg-4 test-info mt-lg-0 mt-5">-->
+<!--					<p><span class="fa fa-quote-left mr-1"></span> Lorem Ipsum has been the industry's standard since-->
+<!--						the-->
+<!--						1500s. Praesent ullamcorper dui turpis.Nulla non laoreet eleifend. <span-->
+<!--							class="fa fa-quote-right ml-1"></span></p>-->
+<!--					<div class="test-img mb-3">-->
+<!--						<img src="../static/images/te1.jpg" class="img-fluid" alt="user-image">-->
+<!--					</div>-->
+<!--					<h3 class="my-md-2 my-3">Jenifer Burns</h3>-->
+<!--					<ul class="list-unstyled w3layouts-icons">-->
+<!--						<li>-->
+<!--							<a href="#">-->
+<!--								<span class="fa fa-star"></span>-->
+<!--							</a>-->
+<!--						</li>-->
+<!--						<li>-->
+<!--							<a href="#">-->
+<!--								<span class="fa fa-star"></span>-->
+<!--							</a>-->
+<!--						</li>-->
+<!--						<li>-->
+<!--							<a href="#">-->
+<!--								<span class="fa fa-star"></span>-->
+<!--							</a>-->
+<!--						</li>-->
+<!--						<li>-->
+<!--							<a href="#">-->
+<!--								<span class="fa fa-star-half-o"></span>-->
+<!--							</a>-->
+<!--						</li>-->
+<!--					</ul>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</section>-->
+<!--	&lt;!&ndash; //testimonials &ndash;&gt;-->
 
 	<!-- middle section -->
 	<div class="text py-5 text-center">
