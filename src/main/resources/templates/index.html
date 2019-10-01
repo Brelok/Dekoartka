@@ -40,6 +40,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Tangerine:400,700" rel="stylesheet">
     <!-- //Web-Fonts -->
+    <script src="https://kit.fontawesome.com/d2ab83011e.js"></script>
 </head>
 
 <body>
@@ -160,7 +161,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="row ser-sec-1">
             <div class="col-md-4 ser-w3ls-wthree">
                 <div class="icon">
-                    <span><img th:src="@{/images/l.jpg}" alt=""/></span>
+                    <span class='fas fa-pencil-alt'></span>
                 </div>
                 <!-- Icon ends here -->
                 <div class="service-content">
@@ -264,82 +265,89 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <p class="sub-tittle text-center mt-3 mb-sm-5 mb-4" th:text="#{galleryAbout}">about gallery</p>
         <div class="row no-gutters">
             <div class="col-md-3 gal-img">
-                <a href="#gal1"><img th:src="@{/images/paleta_mała.jpg}" alt="Gallery Image" class="img-fluid"></a>
+                <a th:href="@{/#1(id=9)}"><img th:src="@{/images/paleta_mała.jpg}" alt="Gallery Image"
+                                               class="img-fluid"></a>
             </div>
             <div class="col-md-3 gal-img">
-                <a href="#gal5"><img src="../static/images/g5.jpg" alt="Gallery Image" class="img-fluid"></a>
+                <a th:href="@{/#2(id=4)}"><img th:src="@{/images/paleta_duża.jpg}" alt="Gallery Image"
+                                               class="img-fluid"></a>
             </div>
             <div class="col-md-3 gal-img">
-                <a href="#gal4"><img src="../static/images/g4.jpg" alt="Gallery Image" class="img-fluid"></a>
+                <a href="#3"><img th:src="@{/images/mały_bukiet.jpg}" alt="Gallery Image" class="img-fluid"></a>
             </div>
             <div class="col-md-3 gal-img">
-                <a href="#gal3"><img src="../static/images/g3.jpg" alt="Gallery Image" class="img-fluid"></a>
+                <a href="#4"><img th:src="@{/images/kwiatek_love.jpg}" alt="Gallery Image" class="img-fluid"></a>
             </div>
         </div>
         <div class="row no-gutters">
-            <div class="col-md-3 gal-img ml-auto">
-                <a href="#gal6"><img src="../static/images/g6.jpg" alt="Gallery Image" class="img-fluid"></a>
+            <div class="col-md-3 gal-img m-auto">
+                <a href="#5"><img th:src="@{/images/spiewnik.jpg}" alt="Gallery Image" class="img-fluid"></a>
             </div>
-            <div class="col-md-3 gal-img mr-auto">
-                <a href="#gal2"><img src="../static/images/g2.jpg" alt="Gallery Image" class="img-fluid"></a>
+            <div class="col-md-3 gal-img m-auto">
+                <a href="#6"><img th:src="@{/images/mjsłodka.jpg}" alt="Gallery Image" class="img-fluid"></a>
+            </div>
+            <div class="col-md-3 gal-img m-auto">
+                <a href="#7"><img th:src="@{/images/table.jpg}" alt="Gallery Image" class="img-fluid"></a>
             </div>
         </div>
         <!-- gallery popups -->
         <!-- popup-->
-        <div id="gal1" class="pop-overlay animate">
+        <div id="1" class="pop-overlay animate">
             <div class="popup">
                 <img th:src="@{/images/paleta_mała.jpg}" alt="Popup Image" class="img-fluid"/>
-                <p class="mt-4" th:text="#{image_1(${productToRent.description})}">image_1</p>
+                <!--                <p class="mt-4" th:text="#{image_1(${productToRent.description})}">image_1</p>-->
                 <a class="close" href="#gallery">&times;</a>
             </div>
         </div>
         <!-- //popup -->
         <!-- popup-->
-        <div id="gal2" class="pop-overlay animate">
+        <div id="2" class="pop-overlay animate">
             <div class="popup">
-                <img src="../static/images/g2.jpg" alt="Popup Image" class="img-fluid"/>
-                <p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat
-                    dolor.</p>
+                <img th:src="@{/images/paleta_duża.jpg}" alt="Popup Image" class="img-fluid"/>
+                <!--                <p class="mt-4" th:text="#{image_2(${productToRent.description})}">image_2</p>-->
                 <a class="close" href="#gallery">&times;</a>
             </div>
         </div>
         <!-- //popup -->
         <!-- popup-->
-        <div id="gal3" class="pop-overlay animate">
+        <div id="3" class="pop-overlay animate">
             <div class="popup">
-                <img src="../static/images/g3.jpg" alt="Popup Image" class="img-fluid"/>
-                <p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat
-                    dolor.</p>
+                <img th:src="@{/images/mały_bukiet.jpg}" alt="Popup Image" class="img-fluid"/>
+                <!--                <p class="mt-4" th:text="#{image_3(${productToRent.description})}">image_3</p>-->
                 <a class="close" href="#gallery">&times;</a>
             </div>
         </div>
         <!-- //popup3 -->
         <!-- popup-->
-        <div id="gal4" class="pop-overlay animate">
+        <div id="4" class="pop-overlay animate">
             <div class="popup">
-                <img src="../static/images/g4.jpg" alt="Popup Image" class="img-fluid"/>
-                <p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat
-                    dolor.</p>
+                <img th:src="@{/images/kwiatek_love.jpg}" alt="Popup Image" class="img-fluid"/>
+                <!--                <p class="mt-4" th:text="#{image_4(${productToRent.description})}">image_4</p>-->
                 <a class="close" href="#gallery">&times;</a>
             </div>
         </div>
         <!-- //popup -->
         <!-- popup-->
-        <div id="gal5" class="pop-overlay animate">
+        <div id="5" class="pop-overlay animate">
             <div class="popup">
-                <img src="../static/images/g5.jpg" alt="Popup Image" class="img-fluid"/>
-                <p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat
-                    dolor.</p>
+                <img th:src="@{/images/spiewnik.jpg}" alt="Popup Image" class="img-fluid"/>
+                <!--                <p class="mt-4" th:text="#{image_5(${productToRent.description})}">image_5</p>-->
                 <a class="close" href="#gallery">&times;</a>
             </div>
         </div>
         <!-- //popup -->
         <!-- popup-->
-        <div id="gal6" class="pop-overlay animate">
+        <div id="6" class="pop-overlay animate">
             <div class="popup">
-                <img src="../static/images/g6.jpg" alt="Popup Image" class="img-fluid"/>
-                <p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat
-                    dolor.</p>
+                <img th:src="@{/images/mjsłodka.jpg}" alt="Popup Image" class="img-fluid"/>
+                <!--                <p class="mt-4" th:text="#{image_6(${productToRent.description})}">image_6</p>-->
+                <a class="close" href="#gallery">&times;</a>
+            </div>
+        </div>
+        <div id="7" class="pop-overlay animate">
+            <div class="popup">
+                <img th:src="@{/images/table.jpg}" alt="Popup Image" class="img-fluid"/>
+                <!--                <p class="mt-4" th:text="#{image_7(${productToRent.description})}">image_7</p>-->
                 <a class="close" href="#gallery">&times;</a>
             </div>
         </div>
@@ -468,7 +476,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <p th:text="#{quoteAbout}">quote About</p>
                 <div class="text-center mt-sm-5 mt-4">
                     <a th:href="@{/about}" class="mr-2 work btn" th:text="#{more}">Read More</a>
-                    <a th:href="@{/contact}" class="work btn"th:text="#{contact}">Contact Us</a>
+                    <a th:href="@{/contact}" class="work btn" th:text="#{contact}">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -483,21 +491,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div class="col-xl-5 col-md-6 footer-left-info text-left">
                 <div class="logo-footer">
                     <h2>
-                        <a href="index.html">Natural</a>
+                        <img th:src="@{/images/logo.png}" alt="logo" class="img-fluid"/>
                     </h2>
                 </div>
-                <p class="mt-lg-5 mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim
-                    neque
-                    condimentum
-                    lacus dapibus.consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus.
+                <p class="mt-lg-5 mt-4">
                 </p>
             </div>
             <div class="col-md-6 footer-right-info text-right offset-xl-1 mt-md-0 mt-5">
-                <h6 th:text="#{contact}">Contact Us</h6>
-                <address class="ad-info mt-lg-5 mt-4">Agnieszka Pradelok
-                    <br>
-                    <a href="tel:+48783272511">783-272-511</a>
-                </address>
+                <h6 th:text="#{tittle}">Tittle</h6>
+                <!--                <address class="ad-info mt-lg-5 mt-4">Agnieszka Pradelok-->
+                <!--                    <br>-->
+                <!--                    <a href="tel:+48783272511">783-272-511</a>-->
+                <!--                </address>-->
             </div>
         </div>
         <!-- social icons -->
