@@ -30,8 +30,4 @@ public class HomeController {
         return "contact";
     }
 
-    @PostMapping("/form")
-    public String form (){
-        return "redirect:/contact";
-    }
 }

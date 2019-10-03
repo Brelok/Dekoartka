@@ -87,23 +87,26 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <form action="/form" method="post">
                     <div class="row main-w3layouts-sectns">
                         <div class="col-md-6 w3-btm-spc form-text1">
-                            <input type="text" name="Name" placeholder="Twoję imię" required="required">
+                            <input type="text" placeholder="Twoję imię" required="" name="name" id="name" value="">
                         </div>
                         <div class="col-md-6 w3-btm-spc form-text2">
-                            <input type="text" name="Phone no" placeholder="Twój numer telefonu" required="">
+                            <input type="text" name="phoneNumber" placeholder="Twój numer telefonu" required="" id="phoneNumber"
+                                   value="">
                         </div>
                     </div>
                     <div class="row main-w3layouts-sectns">
                         <div class="col-md-6 w3-btm-spc form-text1">
-                            <input type="email" name="email" placeholder="Twój adres mailowy" required="">
+                            <input type="email" name="email" placeholder="Twój adres mailowy" required="" id="email"
+                                   value="">
                         </div>
                         <div class="col-md-6 w3-btm-spc form-text2">
-                            <input type="text" name="subject" placeholder="Temat pytania" required="">
+                            <input type="text" name="subject" placeholder="Temat pytania" required="" id="subject"
+                                   value="">
                         </div>
                     </div>
                     <div class="main-w3layouts-sectns ">
                         <div class="w3-btm-spc form-text2 p-0">
-                            <textarea placeholder="Twoja wiadomość" name="message"></textarea>
+                            <textarea placeholder="Twoja wiadomość" name="message" id="message" value=""></textarea>
                         </div>
                     </div>
                     <button type="submit" class="btn mt-3" id="button">Wyślij</button>

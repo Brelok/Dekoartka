@@ -1,9 +1,6 @@
 $(function () {
 
-    console.log('cvzcv');
-
-    var form = $('#button');
-
-    form.css('background', '#A27157');
+    var button = $('#button'); //submit
+    button.css('background', '#A27157');
 
 })
