@@ -5,6 +5,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import pl.littledecothings.product.ProductToRentService;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
 @Controller
 @RequestMapping("/")
 public class HomeController {
@@ -25,9 +29,6 @@ public class HomeController {
         return "about";
     }
 
-    @GetMapping("/contact")
-    public String contact() {
-        return "contact";
-    }
+
 
 }

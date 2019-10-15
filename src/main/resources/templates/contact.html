@@ -6,7 +6,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml" xmlns:form="http://www.w3.org/1999/html">
 <head>
     <title>Little Deco Things</title>
     <!-- Meta tag Keywords -->
@@ -46,6 +46,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
     <!-- icon to html -->
     <script src="https://kit.fontawesome.com/d2ab83011e.js"></script>
+
+    <!-- datepicker from jquery -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#date").datepicker();
+        });
+    </script>
 
 </head>
 
@@ -87,16 +98,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <form action="/form" method="post">
                     <div class="row main-w3layouts-sectns">
                         <div class="col-md-6 w3-btm-spc form-text1">
-                            <input type="text" placeholder="Twoję imię" required="" name="name" id="name" value="">
+                            <input type="text" placeholder="Imię" required="" name="name" id="name" value="">
                         </div>
                         <div class="col-md-6 w3-btm-spc form-text2">
-                            <input type="text" name="phoneNumber" placeholder="Twój numer telefonu" required="" id="phoneNumber"
+                            <input type="text" name="phoneNumber" placeholder="Numer telefonu" required=""
+                                   id="phoneNumber"
                                    value="">
                         </div>
                     </div>
                     <div class="row main-w3layouts-sectns">
                         <div class="col-md-6 w3-btm-spc form-text1">
-                            <input type="email" name="email" placeholder="Twój adres mailowy" required="" id="email"
+                            <input type="email" name="email" placeholder="Adres mailowy" required="" id="email"
                                    value="">
                         </div>
                         <div class="col-md-6 w3-btm-spc form-text2">
@@ -104,9 +116,84 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                    value="">
                         </div>
                     </div>
+
+                    <div class="row main-w3layouts-sectns">
+                        <div class="col-md-6 w3-btm-spc form-text1">
+                            <input type="text" id="date" name="date" value="" placeholder="Wybierz datę">
+                        </div>
+                        <div class="col-md-6 w3-btm-spc form-text1">
+                            <input type="text" id="service" name="date" value="" placeholder="Co cię interesuje?">
+                        </div>
+                    </div>
+                    <div class="row main-w3layouts-sectns">
+                        <!--                        <div class="col-md-6 w3-btm-spc form-text1">-->
+                        <!--                            <ul>-->
+                        <!--                                <li th:each="service : ${services}">-->
+                        <!--                                    <input type="checkbox" th:value="${service}"/>-->
+                        <!--                                    <label-->
+                        <!--                                            th:text="${service}">Heating</label>-->
+                        <!--                                </li>-->
+                        <!--                            </ul>-->
+                        <!--                        </div>-->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6 offset-md-3">
+                                    <div class="card" style="margin:50px 0">
+                                        <div class="card-header">Checkbox Animation</div>
+
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                Bootstrap Checkbox Default
+                                                <label class="checkbox">
+                                                    <input type="checkbox"/>
+                                                    <span class="default"></span>
+                                                </label>
+                                            </li>
+                                            <li class="list-group-item">
+                                                Bootstrap Checkbox Primary
+                                                <label class="checkbox">
+                                                    <input type="checkbox"/>
+                                                    <span class="primary"></span>
+                                                </label>
+                                            </li>
+                                            <li class="list-group-item">
+                                                Bootstrap Checkbox Success
+                                                <label class="checkbox">
+                                                    <input type="checkbox"/>
+                                                    <span class="success"></span>
+                                                </label>
+                                            </li>
+                                            <li class="list-group-item">
+                                                Bootstrap Checkbox Info
+                                                <label class="checkbox">
+                                                    <input type="checkbox"/>
+                                                    <span class="info"></span>
+                                                </label>
+                                            </li>
+                                            <li class="list-group-item">
+                                                Bootstrap Checkbox Warning
+                                                <label class="checkbox">
+                                                    <input type="checkbox"/>
+                                                    <span class="warning"></span>
+                                                </label>
+                                            </li>
+                                            <li class="list-group-item">
+                                                Bootstrap Checkbox Danger
+                                                <label class="checkbox">
+                                                    <input type="checkbox"/>
+                                                    <span class="danger"></span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="main-w3layouts-sectns ">
                         <div class="w3-btm-spc form-text2 p-0">
-                            <textarea placeholder="Twoja wiadomość" name="message" id="message" value=""></textarea>
+                            <textarea placeholder="Wiadomość" name="message" id="message" value=""></textarea>
                         </div>
                     </div>
                     <button type="submit" class="btn mt-3" id="button">Wyślij</button>

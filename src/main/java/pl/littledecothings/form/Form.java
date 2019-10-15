@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.Arrays;
 
 @Entity
 @Getter
@@ -23,24 +24,32 @@ public class Form {
     private String phoneNumber;
     private String email;
     private String subject;
+    private String date;
     private String message;
+    private String [] services;
 
-    public Form(String name, String phoneNumber, String email, String subject, String message) {
+    public Form(String name, String phoneNumber, String email, String subject, String date, String message, String [] services) {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.email = email;
         this.subject = subject;
+        this.date = date;
+        this.services = services;
         this.message = message;
     }
+
 
     @Override
     public String toString() {
         return "Form{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", email='" + email + '\'' +
                 ", subject='" + subject + '\'' +
+                ", date='" + date + '\'' +
                 ", message='" + message + '\'' +
+                ", services=" + Arrays.toString(services) +
                 '}';
     }
 }
