@@ -21,15 +21,17 @@ public class Form {
     private Long id;
 
     private String name;
+    private String surname;
     private String phoneNumber;
     private String email;
     private String subject;
     private String date;
     private String message;
-    private String [] services;
+    private String[] services;
 
-    public Form(String name, String phoneNumber, String email, String subject, String date, String message, String [] services) {
+    public Form(String name, String surname, String phoneNumber, String email, String subject, String date, String message, String[] services) {
         this.name = name;
+        this.surname = surname;
         this.phoneNumber = phoneNumber;
         this.email = email;
         this.subject = subject;
@@ -38,12 +40,12 @@ public class Form {
         this.message = message;
     }
 
-
     @Override
     public String toString() {
         return "Form{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", email='" + email + '\'' +
                 ", subject='" + subject + '\'' +

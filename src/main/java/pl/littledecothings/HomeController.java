@@ -29,6 +29,24 @@ public class HomeController {
         return "about";
     }
 
+    @GetMapping("/contact")
+    public String contact() {
+        return "contact";
+    }
 
+    @ModelAttribute("services")
+    public List services() {
+        List<String> services = new ArrayList<>();
+        services.add("zaproszenia");
+        services.add("winietki");
+        services.add("zawieszki na butelki");
+        services.add("podziękowania dla gości");
+        services.add("wystrój sali");
+        services.add("bukiet");
+        services.add("kartki okolicznościowe");
+        services.add("inne");
+
+        return services;
+    }
 
 }
