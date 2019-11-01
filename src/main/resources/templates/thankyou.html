@@ -1,0 +1,152 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Little Deco Things</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8"/>
+    <meta name="keywords"
+          content="Natural Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"/>
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!--// Meta tag Keywords -->
+
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <!-- Bootstrap-CSS -->
+    <link rel="stylesheet" href="/css/style.css" type="text/css" media="all"/>
+    <!-- Style-CSS -->
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Font-Awesome-Icons-CSS -->
+    <!-- //Custom-Files -->
+
+    <!-- Web-Fonts -->
+    <link
+            href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+            rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Tangerine:400,700" rel="stylesheet">
+    <!-- //Web-Fonts -->
+
+    <!-- icon to html -->
+    <script src="https://kit.fontawesome.com/d2ab83011e.js"></script>
+
+</head>
+
+<body>
+<!-- home -->
+<div id="home">
+    <!-- banner -->
+    <div class="banner_w3lspvt-2 text-center">
+        <!-- nav -->
+        <div class="nav_w3ls pt-4 pb-3 text-center position-static">
+            <nav>
+                <label for="drop" class="toggle">Menu</label>
+                <input type="checkbox" id="drop"/>
+                <ul class="menu">
+                    <li><a th:href="@{/}">Strona główna</a></li>
+                    <li><a th:href="@{/about}">O nas</a></li>
+                    <li><a th:href="@{/#services}">Usługi</a></li>
+                    <li><a th:href="@{/#gallery}">Galeria</a></li>
+                    <li><a th:href="@{/contact}">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- //nav -->
+        <div class="banner-inner">
+            <h1><p th:text="#{tittle}" class="logo-2">Tittle</p></h1>
+        </div>
+    </div>
+    <!-- //banner -->
+</div>
+<!-- //home -->
+
+<!-- about -->
+<section class="about-2 py-5">
+    <div class="container py-xl-5 py-lg-3">
+        <h3 class="tittle text-center" th:text="#{formMain}">About Us</h3>
+        <p class="sub-tittle text-center mt-3 mb-sm-5 mb-4" th:text="#{formMainMore}">aboutUsMore</p>
+        <div class="row">
+<!--            <div class="col-lg-6 about-left-inner">-->
+<!--                <h3 th:text="#{tittle}">tiitle</h3>-->
+<!--                <p class="mt-4" th:text="#{quoteAbout}">quoteAbout</p>-->
+<!--            </div>-->
+<!--            <div class="col-lg-6 about-right-inner text-center mt-lg-0 mt-5">-->
+                <img th:src="@{/images/thankyou.png}" alt="thankyou" class="img-fluid img-border"/>
+<!--            </div>-->
+        </div>
+
+    </div>
+</section>
+<!-- //about -->
+
+<!-- footer -->
+<footer class="footer-sec-w3layouts py-5 ">
+    <div class="container py-xl-5 py-lg-3">
+        <div class="row pb-3">
+            <div class="col-xl-5 col-md-6 footer-left-info text-left">
+                <div class="logo-footer">
+                    <h2>
+                        <img th:src="@{/images/logo.png}" alt="logo" class="img-fluid"/>
+                    </h2>
+                </div>
+                <p class="mt-lg-5 mt-4">
+                </p>
+            </div>
+            <div class="col-md-6 footer-right-info text-right offset-xl-1 mt-md-0 mt-5">
+                <h6 th:text="#{tittle}">Tittle</h6>
+                <!--                <address class="ad-info mt-lg-5 mt-4">Agnieszka Pradelok-->
+                <!--                    <br>-->
+                <!--                    <a href="tel:+48783272511">783-272-511</a>-->
+                <!--                </address>-->
+            </div>
+        </div>
+        <!-- social icons -->
+        <div class="social-icons-footer social-w3pvt-footer border-top text-center pt-md-5 pt-4 mt-md-5 mt-4">
+            <ul class="list-unstyled">
+                <li>
+                    <a th:href="@{https://www.facebook.com/agnieszka.rybicka.9}" target="_blank">
+                        <span class="fab fa-facebook-f"></span>
+                    </a>
+                </li>
+                <li>
+                    <a th:href="@{https://www.instagram.com/little_deco_things/}" target="_blank">
+                        <span class="fab fa-instagram"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- //social icons -->
+    </div>
+</footer>
+<!-- //footer -->
+<!-- copyright -->
+<div class="cpy-right text-center py-3">
+    <p>© 2019 Natural. All rights reserved | Design by
+        <a href="http://w3layouts.com"> W3layouts.</a>
+    </p>
+</div>
+<!-- //copyright -->
+<!-- move top icon -->
+<a href="#home" class="move-top text-center">
+    <span class="fa fa-chevron-circle-up" aria-hidden="true"></span>
+</a>
+<!-- //move top icon -->
+
+
+</body>
+
+</html>

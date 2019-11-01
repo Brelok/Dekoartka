@@ -33,7 +33,7 @@ public class FormController {
 
         Form form = new Form(name, surname, phoneNumber, email, subject, date, message);
         formService.add(form);
-        return "redirect:/contact";
+        return "thankyou";
     }
 
 
