@@ -6,7 +6,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml" xmlns:form="http://www.w3.org/1999/html">
 <head>
     <title>Little Deco Things</title>
     <!-- Meta tag Keywords -->
@@ -47,6 +47,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!-- icon to html -->
     <script src="https://kit.fontawesome.com/d2ab83011e.js"></script>
 
+    <!-- datepicker from jquery -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#date").datepicker();
+        });
+    </script>
+
 </head>
 
 <body>
@@ -84,29 +95,63 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <p class="sub-tittle text-center mt-3 mb-sm-5 mb-4" th:text="#{contactAbout}">contact about</p>
         <div class="row mt-4">
             <div class="col-lg-8 mb-5">
-                <form action="/form" method="post">
+                <form action="/form" method="post" >
                     <div class="row main-w3layouts-sectns">
                         <div class="col-md-6 w3-btm-spc form-text1">
-                            <input type="text" placeholder="Twoję imię" required="" name="name" id="name" value="">
+                            <input type="text" placeholder="Imię" required="" name="name" id="name" value="">
                         </div>
                         <div class="col-md-6 w3-btm-spc form-text2">
-                            <input type="text" name="phoneNumber" placeholder="Twój numer telefonu" required="" id="phoneNumber"
+                            <input type="text" name="surname" placeholder="Nazwisko" required=""
+                                   id="surname"
                                    value="">
                         </div>
                     </div>
                     <div class="row main-w3layouts-sectns">
-                        <div class="col-md-6 w3-btm-spc form-text1">
-                            <input type="email" name="email" placeholder="Twój adres mailowy" required="" id="email"
+                        <div class="col-md-6 w3-btm-spc form-text2">
+                            <input type="text" name="phoneNumber" placeholder="Numer telefonu, np: 123456789" required=""
+                                   id="phoneNumber"
                                    value="">
                         </div>
+                        <div class="col-md-6 w3-btm-spc form-text1">
+                            <input type="email" name="email" placeholder="Adres mailowy" required="" id="email"
+                                   value="">
+                        </div>
+                    </div>
+
+                    <div class="row main-w3layouts-sectns">
                         <div class="col-md-6 w3-btm-spc form-text2">
                             <input type="text" name="subject" placeholder="Temat pytania" required="" id="subject"
                                    value="">
                         </div>
+                        <div class="col-md-6 w3-btm-spc form-text1">
+                            <input type="text" id="date" name="date" value="" placeholder="Wybierz datę">
+                        </div>
                     </div>
+
+                    <div class="row main-w3layouts-sectns">
+                        <!--                        <div class="col-md-6 w3-btm-spc form-text1">-->
+<!--                        <table width="100%" cellspacing="0"-->
+<!--                               align="middle" class="form">-->
+<!--                            <thead>-->
+<!--                            <tr>-->
+<!--                                <th th:text="#{headInTable1}">Head1</th>-->
+<!--                            </tr>-->
+<!--                            </thead>-->
+<!--                            <tbody>-->
+<!--                            <tr th:each="service : ${services}">-->
+<!--                                <td th:text="${service}">Service</td>-->
+<!--                                <td>-->
+<!--                                    <input type="checkbox" value="" name="services" class="check" id="services">-->
+<!--                                </td>-->
+<!--                            </tr>-->
+<!--                            </tbody>-->
+<!--                        </table>-->
+                        <!--                        </div>-->
+                    </div>
+
                     <div class="main-w3layouts-sectns ">
                         <div class="w3-btm-spc form-text2 p-0">
-                            <textarea placeholder="Twoja wiadomość" name="message" id="message" value=""></textarea>
+                            <textarea placeholder="Wiadomość" name="message" id="message" value=""></textarea>
                         </div>
                     </div>
                     <button type="submit" class="btn mt-3" id="button">Wyślij</button>
