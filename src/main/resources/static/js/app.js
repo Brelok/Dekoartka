@@ -4,7 +4,11 @@ $(function () {
 
     button.css('background', '#A27157');
 
-    button.on('submit', function () {
-        console.log("wiadomość wysłana")
-    })
+    var form = $('#form');
+
+    // button.click(function (event) {
+    //     console.log("gdagd")
+    //
+    // })
+
 })

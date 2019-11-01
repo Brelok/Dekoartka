@@ -73,8 +73,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <ul class="menu">
                     <li><a th:href="@{/}">Strona główna</a></li>
                     <li><a th:href="@{/about}">O nas</a></li>
-                    <li><a href="#services">Usługi</a></li>
-                    <li><a href="#gallery">Galeria</a></li>
+                    <li><a th:href="@{/#services}">Usługi</a></li>
+                    <li><a th:href="@{/#gallery}">Galeria</a></li>
                     <li><a th:href="@{/contact}">Kontakt</a></li>
                 </ul>
             </nav>
@@ -95,7 +95,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <p class="sub-tittle text-center mt-3 mb-sm-5 mb-4" th:text="#{contactAbout}">contact about</p>
         <div class="row mt-4">
             <div class="col-lg-8 mb-5">
-                <form action="/form" method="post" >
+                <form action="/form" method="post"  id="form">
                     <div class="row main-w3layouts-sectns">
                         <div class="col-md-6 w3-btm-spc form-text1">
                             <input type="text" placeholder="Imię" required="" name="name" id="name" value="">
