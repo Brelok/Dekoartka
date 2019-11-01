@@ -21,7 +21,6 @@ public class FormController {
     }
 
 
-
     @PostMapping("/form")
     public String form(@RequestParam String name,
                        @RequestParam String surname,
@@ -29,10 +28,10 @@ public class FormController {
                        @RequestParam String email,
                        @RequestParam String subject,
                        @RequestParam String date,
-                       @RequestParam String message,
-                       @RequestParam String[] services) {
+                       @RequestParam String message
+    ) {
 
-        Form form = new Form(name, surname, phoneNumber, email, subject, date, message, services);
+        Form form = new Form(name, surname, phoneNumber, email, subject, date, message);
         formService.add(form);
         return "redirect:/contact";
     }

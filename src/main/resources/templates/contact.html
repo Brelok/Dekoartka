@@ -95,7 +95,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <p class="sub-tittle text-center mt-3 mb-sm-5 mb-4" th:text="#{contactAbout}">contact about</p>
         <div class="row mt-4">
             <div class="col-lg-8 mb-5">
-                <form action="/form" method="post">
+                <form action="/form" method="post" >
                     <div class="row main-w3layouts-sectns">
                         <div class="col-md-6 w3-btm-spc form-text1">
                             <input type="text" placeholder="Imię" required="" name="name" id="name" value="">
@@ -108,7 +108,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     </div>
                     <div class="row main-w3layouts-sectns">
                         <div class="col-md-6 w3-btm-spc form-text2">
-                            <input type="text" name="phoneNumber" placeholder="Numer telefonu" required=""
+                            <input type="text" name="phoneNumber" placeholder="Numer telefonu, np: 123456789" required=""
                                    id="phoneNumber"
                                    value="">
                         </div>
@@ -130,22 +130,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                     <div class="row main-w3layouts-sectns">
                         <!--                        <div class="col-md-6 w3-btm-spc form-text1">-->
-                        <table width="100%" cellspacing="0"
-                               align="middle" class="form">
-                            <thead>
-                            <tr>
-                                <th th:text="#{headInTable1}">Head1</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr th:each="service : ${services}">
-                                <td th:text="${service}">Service</td>
-                                <td>
-                                    <input type="checkbox" value="" name="services" class="check" id="services">
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
+<!--                        <table width="100%" cellspacing="0"-->
+<!--                               align="middle" class="form">-->
+<!--                            <thead>-->
+<!--                            <tr>-->
+<!--                                <th th:text="#{headInTable1}">Head1</th>-->
+<!--                            </tr>-->
+<!--                            </thead>-->
+<!--                            <tbody>-->
+<!--                            <tr th:each="service : ${services}">-->
+<!--                                <td th:text="${service}">Service</td>-->
+<!--                                <td>-->
+<!--                                    <input type="checkbox" value="" name="services" class="check" id="services">-->
+<!--                                </td>-->
+<!--                            </tr>-->
+<!--                            </tbody>-->
+<!--                        </table>-->
                         <!--                        </div>-->
                     </div>
 
@@ -162,49 +162,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
             </div>
         </div>
-        <!--        <div class="row mt-4">-->
-        <!--            <div class="col-lg-3 contact-left">-->
-        <!--                <span>Dont Wait</span>-->
-        <!--                <h3 class="heading mb-lg-5 mb-4">Send Message</h3>-->
-        <!--            </div>-->
-        <!--            <div class="col-lg-9 contact-text-bot">-->
-        <!--                <p>If you have any queries, or want to speak to one of our customer support-->
-        <!--                    executive, Please contact us for more details by below given information.</p>-->
-        <!--                <div class="row mt-4">-->
-        <!--                    <div class="contact-info col-md-6 pr-md-5">-->
-        <!--                        <h4 class="mb-3">Address 01</h4>-->
-        <!--                        <div class="footer-style-w3ls">-->
-        <!--                            <p><strong>Location</strong> : Customer Agency, 5th cross, 4th building, New York City.-->
-        <!--                            </p>-->
-        <!--                        </div>-->
-        <!--                        <div class="footer-style-w3ls">-->
-        <!--                            <p><strong>Phone</strong> : +121 098 8907 9987</p>-->
-        <!--                        </div>-->
-        <!--                        <div class="footer-style-w3ls">-->
-        <!--                            <p><strong>Fax</strong> : +121 098 8907 9987</p>-->
-        <!--                        </div>-->
-        <!--                        <div class="footer-style-w3ls">-->
-        <!--                            <p><strong>Email</strong> : <a href="mailto:info@example.com">info@example.com</a></p>-->
-        <!--                        </div>-->
-        <!--                    </div>-->
-        <!--                    <div class="contact-info col-md-6 pr-md-5 mt-md-0 mt-4">-->
-        <!--                        <h4 class="mb-3">Address 02</h4>-->
-        <!--                        <div class="footer-style-w3ls">-->
-        <!--                            <p><strong>Location</strong> : Customer Agency, 2nd cross, 4th floor, London.</p>-->
-        <!--                        </div>-->
-        <!--                        <div class="footer-style-w3ls">-->
-        <!--                            <p><strong>Phone</strong> : +121 098 8907 9987</p>-->
-        <!--                        </div>-->
-        <!--                        <div class="footer-style-w3ls">-->
-        <!--                            <p><strong>Fax</strong> : +121 098 8907 9987</p>-->
-        <!--                        </div>-->
-        <!--                        <div class="footer-style-w3ls">-->
-        <!--                            <p><strong>Email</strong> : <a href="mailto:info@example.com">info@example.com</a></p>-->
-        <!--                        </div>-->
-        <!--                    </div>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!--        </div>-->
     </div>
 </section>
 <!-- //contact -->
