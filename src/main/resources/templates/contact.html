@@ -6,9 +6,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml" xmlns:form="http://www.w3.org/1999/html">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml" xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout" layout:decorator="template">
 <head>
-    <title>Little Deco Things</title>
+    <title>Kwiaty w Lesie - napisz do nas :)</title>
     <!-- Meta tag Keywords -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8"/>
@@ -61,33 +61,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </head>
 
 <body>
-<!-- home -->
-<div id="home">
-    <!-- banner -->
-    <div class="banner_w3lspvt-2 text-center">
-        <!-- nav -->
-        <div class="nav_w3ls pt-4 pb-3 text-center position-static">
-            <nav>
-                <label for="drop" class="toggle">Menu</label>
-                <input type="checkbox" id="drop"/>
-                <ul class="menu">
-                    <li><a th:href="@{/}">Strona główna</a></li>
-                    <li><a th:href="@{/about}">O nas</a></li>
-                    <li><a th:href="@{/#services}">Usługi</a></li>
-                    <li><a th:href="@{/#gallery}">Galeria</a></li>
-                    <li><a th:href="@{/contact}">Kontakt</a></li>
-                </ul>
-            </nav>
-        </div>
-        <!-- //nav -->
-        <div class="banner-inner">
-            <h1><p th:text="#{tittle}" class="logo-2">Tittle</p></h1>
-        </div>
-    </div>
-    <!-- //banner -->
-</div>
-<!-- //home -->
-
+<section layout:fragment="content">
 <!-- contact -->
 <section class="contact py-5" id="contact">
     <div class="container py-md-5">
@@ -95,7 +69,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <p class="sub-tittle text-center mt-3 mb-sm-5 mb-4" th:text="#{contactAbout}">contact about</p>
         <div class="row mt-4">
             <div class="col-lg-8 mb-5">
-                <form action="/form" method="post"  id="form">
+                <form action="/form" method="post" id="form">
                     <div class="row main-w3layouts-sectns">
                         <div class="col-md-6 w3-btm-spc form-text1">
                             <input type="text" placeholder="Imię" required="" name="name" id="name" value="">
@@ -108,7 +82,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     </div>
                     <div class="row main-w3layouts-sectns">
                         <div class="col-md-6 w3-btm-spc form-text2">
-                            <input type="text" name="phoneNumber" placeholder="Numer telefonu, np: 123456789" required=""
+                            <input type="text" name="phoneNumber" placeholder="Numer telefonu, np: 123456789"
+                                   required=""
                                    id="phoneNumber"
                                    value="">
                         </div>
@@ -130,22 +105,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                     <div class="row main-w3layouts-sectns">
                         <!--                        <div class="col-md-6 w3-btm-spc form-text1">-->
-<!--                        <table width="100%" cellspacing="0"-->
-<!--                               align="middle" class="form">-->
-<!--                            <thead>-->
-<!--                            <tr>-->
-<!--                                <th th:text="#{headInTable1}">Head1</th>-->
-<!--                            </tr>-->
-<!--                            </thead>-->
-<!--                            <tbody>-->
-<!--                            <tr th:each="service : ${services}">-->
-<!--                                <td th:text="${service}">Service</td>-->
-<!--                                <td>-->
-<!--                                    <input type="checkbox" value="" name="services" class="check" id="services">-->
-<!--                                </td>-->
-<!--                            </tr>-->
-<!--                            </tbody>-->
-<!--                        </table>-->
+                        <!--                        <table width="100%" cellspacing="0"-->
+                        <!--                               align="middle" class="form">-->
+                        <!--                            <thead>-->
+                        <!--                            <tr>-->
+                        <!--                                <th th:text="#{headInTable1}">Head1</th>-->
+                        <!--                            </tr>-->
+                        <!--                            </thead>-->
+                        <!--                            <tbody>-->
+                        <!--                            <tr th:each="service : ${services}">-->
+                        <!--                                <td th:text="${service}">Service</td>-->
+                        <!--                                <td>-->
+                        <!--                                    <input type="checkbox" value="" name="services" class="check" id="services">-->
+                        <!--                                </td>-->
+                        <!--                            </tr>-->
+                        <!--                            </tbody>-->
+                        <!--                        </table>-->
                         <!--                        </div>-->
                     </div>
 
@@ -163,6 +138,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </div>
         </div>
     </div>
+</section>
 </section>
 <!-- //contact -->
 
@@ -183,46 +159,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </div>
 <!-- //middle section -->
 
-<!-- footer -->
-<footer class="footer-sec-w3layouts py-5 ">
-    <div class="container py-xl-5 py-lg-3">
-        <div class="row pb-3">
-            <div class="col-xl-5 col-md-6 footer-left-info text-left">
-                <div class="logo-footer">
-                    <h2>
-                        <img th:src="@{/images/logo.png}" alt="logo" class="img-fluid"/>
-                    </h2>
-                </div>
-                <p class="mt-lg-5 mt-4">
-                </p>
-            </div>
-            <div class="col-md-6 footer-right-info text-right offset-xl-1 mt-md-0 mt-5">
-                <h6 th:text="#{tittle}">Tittle</h6>
-                <!--                <address class="ad-info mt-lg-5 mt-4">Agnieszka Pradelok-->
-                <!--                    <br>-->
-                <!--                    <a href="tel:+48783272511">783-272-511</a>-->
-                <!--                </address>-->
-            </div>
-        </div>
-        <!-- social icons -->
-        <div class="social-icons-footer social-w3pvt-footer border-top text-center pt-md-5 pt-4 mt-md-5 mt-4">
-            <ul class="list-unstyled">
-                <li>
-                    <a th:href="@{https://www.facebook.com/agnieszka.rybicka.9}" target="_blank">
-                        <span class="fab fa-facebook-f"></span>
-                    </a>
-                </li>
-                <li>
-                    <a th:href="@{https://www.instagram.com/little_deco_things/}" target="_blank">
-                        <span class="fab fa-instagram"></span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <!-- //social icons -->
-    </div>
-</footer>
-<!-- //footer -->
 <!-- copyright -->
 <div class="cpy-right text-center py-3">
     <p>© 2019 Natural. All rights reserved | Design by
@@ -236,7 +172,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </a>
 <!-- //move top icon -->
 
-<script src="/js/app.js"></script>
 </body>
 
 </html>

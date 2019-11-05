@@ -728,6 +728,22 @@ a.button-style-3 {
     text-transform: uppercase;
 }
 
+.buttonsMore {
+    border: 1px solid rgba(51, 51, 51, 0.3);
+    -webkit-border-radius: 0px;
+    -o-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    padding: 13px 22px;
+    color: #333;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-top: 3em;
+    text-transform: uppercase;
+}
+
 /* //about */
 
 /* services */

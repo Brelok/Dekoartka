@@ -1,12 +1,10 @@
 package pl.littledecothings;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import pl.littledecothings.product.ProductToRentService;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 @Controller
@@ -27,6 +25,11 @@ public class HomeController {
     @GetMapping("/about")
     public String about() {
         return "about";
+    }
+
+    @GetMapping("/blog")
+    public String blog() {
+        return "blog";
     }
 
     @GetMapping("/contact")

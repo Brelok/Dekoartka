@@ -4,11 +4,15 @@ $(function () {
 
     button.css('background', '#A27157');
 
-    var form = $('#form');
+    var buttonsFromBlog = $('.buttonsMore'); // buttony read less/more
 
-    // button.click(function (event) {
-    //     console.log("gdagd")
-    //
-    // })
+    var articles = $('p.mb-3'); //articles
 
-})
+    var firstArticle = $('p.first');
+
+
+    if (firstArticle.value.length >= 500) {
+        firstArticle.css('color', 'red');
+    }
+
+});

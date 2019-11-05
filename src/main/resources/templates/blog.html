@@ -1,0 +1,99 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout" layout:decorator="template">
+<head>
+    <title>Kwiaty w Lesie - opowieści</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8"/>
+    <meta name="keywords"
+          content="Natural Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"/>
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!--// Meta tag Keywords -->
+
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <!-- Bootstrap-CSS -->
+    <link rel="stylesheet" href="/css/style.css" type="text/css" media="all"/>
+    <!-- Style-CSS -->
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Font-Awesome-Icons-CSS -->
+    <!-- //Custom-Files -->
+
+    <!-- Web-Fonts -->
+    <link
+            href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+            rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Tangerine:400,700" rel="stylesheet">
+    <!-- //Web-Fonts -->
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- icon to html -->
+    <script src="https://kit.fontawesome.com/d2ab83011e.js"></script>
+
+</head>
+
+<body>
+<section layout:fragment="content">
+<!-- home -->
+
+<!-- about -->
+<section class="about py-5">
+    <div class="py-xl-5 py-lg-3">
+        <div class="d-xl-flex about-grids">
+            <div class="col-xl-4 about-left p-0">
+                <img th:src="@{/images/candy_bar.jpg}" alt="" class="img-fluid"/>
+            </div>
+            <div class="col-xl-8 about-right border-bottom">
+                <h3 class="mb-3" th:text="#{tittleArticle1}">First thing</h3>
+                <p class="first" th:text="#{article1}">firstThingAbout</p>
+                <button class="buttonsMore" th:text="#{more}">Learn More</button>
+            </div>
+        </div>
+        <div class="d-xl-flex about-grids flex-row-reverse">
+            <div class="col-xl-4 about-left p-0">
+                <img th:src="@{/images/candy_bar.jpg}" alt="" class="img-fluid"/>
+            </div>
+            <div class="col-xl-8 about-right border-bottom">
+                <h3 class="mb-3" th:text="#{tittleArticle2}">Second thing</h3>
+                <p class="mb-3" th:text="#{article2}">secondThingAbout</p>
+                <button class="buttonsMore" th:text="#{more}">Learn More</button>
+            </div>
+        </div>
+        <div class="d-xl-flex about-grids">
+            <div class="col-xl-4 about-left p-0">
+                <img th:src="@{/images/candy_bar.jpg}" alt="" class="img-fluid"/>
+            </div>
+            <div class="col-xl-8 about-right">
+                <h3 class="mb-3" th:text="#{tittleArticle3}">Third thing</h3>
+                <p class="mb-3" th:text="#{article3}">thirdThingAbout</p>
+                <button class="buttonsMore" th:text="#{more}">Learn More</button>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- //about -->
+
+
+
+<script src="/js/app.js"></script>
+</section>
+</body>
+
+</html>
