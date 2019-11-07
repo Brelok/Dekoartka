@@ -728,7 +728,7 @@ a.button-style-3 {
     text-transform: uppercase;
 }
 
-.buttonsMore {
+.buttonsMore, .buttonsLess {
     border: 1px solid rgba(51, 51, 51, 0.3);
     -webkit-border-radius: 0px;
     -o-border-radius: 0px;
@@ -742,6 +742,8 @@ a.button-style-3 {
     font-weight: 600;
     margin-top: 3em;
     text-transform: uppercase;
+    display: none;
+    cursor: pointer;
 }
 
 /* //about */
@@ -1766,6 +1768,8 @@ h3.heading {
 .check{
     display: block
 }
+
+
 
 
 /* //responsive */

@@ -6,7 +6,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout" layout:decorator="template">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      layout:decorator="template">
 <head>
     <title>Kwiaty w Lesie - opowieści</title>
     <!-- Meta tag Keywords -->
@@ -51,48 +52,44 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 <body>
 <section layout:fragment="content">
-<!-- home -->
+    <!-- home -->
 
-<!-- about -->
-<section class="about py-5">
-    <div class="py-xl-5 py-lg-3">
-        <div class="d-xl-flex about-grids">
-            <div class="col-xl-4 about-left p-0">
-                <img th:src="@{/images/candy_bar.jpg}" alt="" class="img-fluid"/>
+    <!-- about -->
+    <section class="about py-5">
+        <div class="py-xl-5 py-lg-3">
+            <div class="d-xl-flex about-grids">
+                <div class="col-xl-4 about-left p-0">
+                    <img th:src="@{/images/candy_bar.jpg}" alt="" class="img-fluid"/>
+                </div>
+                <div class="col-xl-8 about-right border-bottom">
+                    <h3 class="mb-3" th:text="#{tittleArticle1}">First thing</h3>
+                    <p class="article" th:text="#{article1}">firstThingAbout</p>
+                    <button class="buttonsMore" th:text="#{more}">Learn More</button>
+                </div>
             </div>
-            <div class="col-xl-8 about-right border-bottom">
-                <h3 class="mb-3" th:text="#{tittleArticle1}">First thing</h3>
-                <p class="first" th:text="#{article1}">firstThingAbout</p>
-                <button class="buttonsMore" th:text="#{more}">Learn More</button>
+            <div class="d-xl-flex about-grids flex-row-reverse">
+                <div class="col-xl-4 about-left p-0">
+                    <img th:src="@{/images/candy_bar.jpg}" alt="" class="img-fluid"/>
+                </div>
+                <div class="col-xl-8 about-right border-bottom">
+                    <h3 class="mb-3" th:text="#{tittleArticle2}">Second thing</h3>
+                    <p class="article" th:text="#{article2}">secondThingAbout</p>
+                    <button class="buttonsMore" th:text="#{more}">Learn More</button>
+                </div>
+            </div>
+            <div class="d-xl-flex about-grids">
+                <div class="col-xl-4 about-left p-0">
+                    <img th:src="@{/images/candy_bar.jpg}" alt="" class="img-fluid"/>
+                </div>
+                <div class="col-xl-8 about-right">
+                    <h3 class="mb-3" th:text="#{tittleArticle3}">Third thing</h3>
+                    <p class="article" th:text="#{article3}">thirdThingAbout</p>
+                    <button class="buttonsMore" th:text="#{more}">Learn More</button>
+                </div>
             </div>
         </div>
-        <div class="d-xl-flex about-grids flex-row-reverse">
-            <div class="col-xl-4 about-left p-0">
-                <img th:src="@{/images/candy_bar.jpg}" alt="" class="img-fluid"/>
-            </div>
-            <div class="col-xl-8 about-right border-bottom">
-                <h3 class="mb-3" th:text="#{tittleArticle2}">Second thing</h3>
-                <p class="mb-3" th:text="#{article2}">secondThingAbout</p>
-                <button class="buttonsMore" th:text="#{more}">Learn More</button>
-            </div>
-        </div>
-        <div class="d-xl-flex about-grids">
-            <div class="col-xl-4 about-left p-0">
-                <img th:src="@{/images/candy_bar.jpg}" alt="" class="img-fluid"/>
-            </div>
-            <div class="col-xl-8 about-right">
-                <h3 class="mb-3" th:text="#{tittleArticle3}">Third thing</h3>
-                <p class="mb-3" th:text="#{article3}">thirdThingAbout</p>
-                <button class="buttonsMore" th:text="#{more}">Learn More</button>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- //about -->
-
-
-
-<script src="/js/app.js"></script>
+    </section>
+    <!-- //about -->
 </section>
 </body>
 

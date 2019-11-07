@@ -4,15 +4,34 @@ $(function () {
 
     button.css('background', '#A27157');
 
-    var buttonsFromBlog = $('.buttonsMore'); // buttony read less/more
+/* read more/less - start */
+    var articles = $('.article'); //articles
+    var maxChar = 300
 
-    var articles = $('p.mb-3'); //articles
+    articles.each(function () {
+        if ($(this).html().toString().length > maxChar) {
 
-    var firstArticle = $('p.first');
+            var button = $(this).siblings('.buttonsMore');
+            button.css('display', 'block');
 
+            var height = $(this).height();
+            $(this).css('height', '210px');
 
-    if (firstArticle.value.length >= 500) {
-        firstArticle.css('color', 'red');
-    }
+            button.on('click', function () {
+                if ($(this).hasClass('buttonsLess')) {
+                    $(this).removeClass('buttonsLess');
+                    $(this).html("Czytaj więcej");
+                    $(this).siblings('.article').animate({height: '210px'}, 1000);
+
+                } else {
+                    $(this).addClass('buttonsLess');
+                    $(this).html("Czytaj mniej");
+                    $(this).siblings('.article').animate({height: height}, 1000);
+                }
+            })
+        }
+    })
+    /* read more/less - end */
+
 
 });
