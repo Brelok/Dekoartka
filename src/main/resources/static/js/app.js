@@ -33,5 +33,8 @@ $(function () {
     })
     /* read more/less - end */
 
+    var menu = $('.menu');
+    menu.css('position', 'fixed');
+
 
 });

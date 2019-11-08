@@ -16,7 +16,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
           content="Natural Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"/>
     <script>
         addEventListener("load", function () {
-            setTimeout(hideURLbar, 0);
+            setTimeout(hideURLbar, 10);
         }, false);
 
         function hideURLbar() {
@@ -31,6 +31,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <link rel="stylesheet" href="/css/style.css" type="text/css" media="all"/>
     <!-- Style-CSS -->
     <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Lightbox-CSS -->
+    <link href="/css/lightbox.css" rel="stylesheet">
     <!-- Font-Awesome-Icons-CSS -->
     <!-- //Custom-Files -->
 
@@ -40,6 +42,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Tangerine:400,700" rel="stylesheet">
     <!-- //Web-Fonts -->
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- icon to html -->
     <script src="https://kit.fontawesome.com/d2ab83011e.js"></script>
@@ -129,7 +134,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div class="col-xl-8 about-right border-bottom">
                 <h3 class="mb-3" th:text="#{firstThing}">First thing</h3>
                 <p class="mb-3" th:text="#{firstThingAbout}">firstThingAbout</p>
-<!--                <a href="#" class="btn button-style-3" th:text="#{more}">Learn More</a>-->
+                <!--                <a href="#" class="btn button-style-3" th:text="#{more}">Learn More</a>-->
             </div>
         </div>
         <div class="d-xl-flex about-grids flex-row-reverse">
@@ -139,7 +144,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div class="col-xl-8 about-right border-bottom">
                 <h3 class="mb-3" th:text="#{secondThing}">Second thing</h3>
                 <p class="mb-3" th:text="#{secondThingAbout}">secondThingAbout</p>
-<!--                <a href="#" class="btn button-style-3" th:text="#{more}">Learn More</a>-->
+                <!--                <a href="#" class="btn button-style-3" th:text="#{more}">Learn More</a>-->
             </div>
         </div>
         <div class="d-xl-flex about-grids">
@@ -149,7 +154,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div class="col-xl-8 about-right">
                 <h3 class="mb-3" th:text="#{thirdThing}">Third thing</h3>
                 <p class="mb-3" th:text="#{thirdThingAbout}">thirdThingAbout</p>
-<!--                <a href="#" class="btn button-style-3" th:text="#{more}">Learn More</a>-->
+                <!--                <a href="#" class="btn button-style-3" th:text="#{more}">Learn More</a>-->
             </div>
         </div>
     </div>
@@ -268,29 +273,48 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <p class="sub-tittle text-center mt-3 mb-sm-5 mb-4" th:text="#{galleryAbout}">about gallery</p>
         <div class="row no-gutters">
             <div class="col-md-3 gal-img">
-                <a th:href="@{/#1(id=9)}"><img th:src="@{/images/paleta_mała.jpg}" alt="Gallery Image"
-                                               class="img-fluid"></a>
+                <a class="example-image-link" th:href="@{/images/paleta_mała.jpg}"
+                   data-lightbox="example-set" data-title="Możesz przełączać zdjęcia strzałkami lub kursorem."><img
+                        th:src="@{/images/paleta_mała.jpg}" alt="Gallery Image"
+                        class="img-fluid"></a>
             </div>
             <div class="col-md-3 gal-img">
-                <a th:href="@{/#2(id=4)}"><img th:src="@{/images/paleta_duża.jpg}" alt="Gallery Image"
-                                               class="img-fluid"></a>
+                <a class="example-image-link" th:href="@{/images/paleta_duża.jpg}"
+                   data-lightbox="example-set" data-title="Możesz przełączać zdjęcia strzałkami lub kursorem."><img
+                        th:src="@{/images/paleta_duża.jpg}" alt="Gallery Image"
+                        class="img-fluid"></a>
             </div>
             <div class="col-md-3 gal-img">
-                <a href="#3"><img th:src="@{/images/mały_bukiet.jpg}" alt="Gallery Image" class="img-fluid"></a>
+                <a class="example-image-link" th:href="@{/images/mały_bukiet.jpg}"
+                   data-lightbox="example-set" data-title="Możesz przełączać zdjęcia strzałkami lub kursorem."><img
+                        th:src="@{/images/mały_bukiet.jpg}" alt="Gallery Image"
+                        class="img-fluid"></a>
             </div>
             <div class="col-md-3 gal-img">
-                <a href="#4"><img th:src="@{/images/kwiatek_love.jpg}" alt="Gallery Image" class="img-fluid"></a>
+                <a class="example-image-link" th:href="@{/images/kwiatek_love.jpg}"
+                   data-lightbox="example-set" data-title="Możesz przełączać zdjęcia strzałkami lub kursorem."><img
+                        th:src="@{/images/kwiatek_love.jpg}" alt="Gallery Image"
+                        class="img-fluid"></a>
             </div>
         </div>
         <div class="row no-gutters">
             <div class="col-md-3 gal-img m-auto">
-                <a href="#5"><img th:src="@{/images/spiewnik.jpg}" alt="Gallery Image" class="img-fluid"></a>
+                <a class="example-image-link" th:href="@{/images/spiewnik.jpg}"
+                   data-lightbox="example-set" data-title="Możesz przełączać zdjęcia strzałkami lub kursorem."><img
+                        th:src="@{/images/spiewnik.jpg}" alt="Gallery Image"
+                        class="img-fluid"></a>
             </div>
             <div class="col-md-3 gal-img m-auto">
-                <a href="#6"><img th:src="@{/images/mjsłodka.jpg}" alt="Gallery Image" class="img-fluid"></a>
+                <a class="example-image-link" th:href="@{/images/mjsłodka.jpg}"
+                   data-lightbox="example-set" data-title="Możesz przełączać zdjęcia strzałkami lub kursorem."><img
+                        th:src="@{/images/mjsłodka.jpg}" alt="Gallery Image"
+                        class="img-fluid"></a>
             </div>
             <div class="col-md-3 gal-img m-auto">
-                <a href="#7"><img th:src="@{/images/table.jpg}" alt="Gallery Image" class="img-fluid"></a>
+                <a class="example-image-link" th:href="@{/images/table.jpg}"
+                   data-lightbox="example-set" data-title="Możesz przełączać zdjęcia strzałkami lub kursorem."><img
+                        th:src="@{/images/table.jpg}" alt="Gallery Image"
+                        class="img-fluid"></a>
             </div>
         </div>
         <!-- gallery popups -->
@@ -358,7 +382,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <!-- //gallery popups -->
     </div>
 </div>
-<!-- //gallery -->
+<!--//gallery-->
 
 <!--	&lt;!&ndash; testimonials &ndash;&gt;-->
 <!--	<section class="testimonials py-5 bg-li" id="testi">-->
@@ -478,7 +502,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <h5 class="text-wh text-capitalize font-weight-bold let mb-4" th:text="#{quote}">quote</h5>
                 <p th:text="#{quoteAbout}">quote About</p>
                 <div class="text-center mt-sm-5 mt-4">
-                    <a th:href="@{/about}" class="mr-2 work btn" th:text="#{more}">Read More</a>
+                    <a th:href="@{/about}" class="mr-2 work btn" th:text="#{aboutUsQuote}">Read More</a>
                     <a th:href="@{/contact}" class="work btn" th:text="#{contact}">Contact Us</a>
                 </div>
             </div>
@@ -539,6 +563,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <span class="fa fa-chevron-circle-up" aria-hidden="true"></span>
 </a>
 <!-- //move top icon -->
+<script src="/js/lightbox.js"></script>
 
 </body>
 

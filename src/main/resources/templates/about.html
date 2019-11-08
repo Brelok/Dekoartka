@@ -6,130 +6,92 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml" xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout" layout:decorator="template">
-<head>
-    <title>Kwiaty w Lesie - To my!</title>
-    <!-- Meta tag Keywords -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="UTF-8"/>
-    <meta name="keywords"
-          content="Natural Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"/>
-    <script>
-        addEventListener("load", function () {
-            setTimeout(hideURLbar, 0);
-        }, false);
-
-        function hideURLbar() {
-            window.scrollTo(0, 1);
-        }
-    </script>
-    <!--// Meta tag Keywords -->
-
-    <!-- Custom-Files -->
-    <link rel="stylesheet" href="/css/bootstrap.css">
-    <!-- Bootstrap-CSS -->
-    <link rel="stylesheet" href="/css/style.css" type="text/css" media="all"/>
-    <!-- Style-CSS -->
-    <link href="/css/font-awesome.min.css" rel="stylesheet">
-    <!-- Font-Awesome-Icons-CSS -->
-    <!-- //Custom-Files -->
-
-    <!-- Web-Fonts -->
-    <link
-            href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
-            rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Tangerine:400,700" rel="stylesheet">
-    <!-- //Web-Fonts -->
-
-    <!-- icon to html -->
-    <script src="https://kit.fontawesome.com/d2ab83011e.js"></script>
-
-</head>
-
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout" layout:decorator="template">
 <body>
 <section layout:fragment="content">
 
-<!-- about -->
-<section class="about-2 py-5">
-    <div class="container py-xl-5 py-lg-3">
-        <h3 class="tittle text-center" th:text="#{aboutUs}">About Us</h3>
-        <p class="sub-tittle text-center mt-3 mb-sm-5 mb-4" th:text="#{aboutUsMore}">aboutUsMore</p>
-        <div class="row">
-            <div class="col-lg-6 about-left-inner">
-                <h3 th:text="#{tittle}">tiitle</h3>
-                <p class="mt-4" th:text="#{quoteAbout}">quoteAbout</p>
+    <!-- about -->
+    <section class="about-2 py-5">
+        <div class="container py-xl-5 py-lg-3">
+            <h3 class="tittle text-center" th:text="#{aboutUs}">About Us</h3>
+            <p class="sub-tittle text-center mt-3 mb-sm-5 mb-4" th:text="#{aboutUsMore}">aboutUsMore</p>
+            <div class="row">
+                <div class="col-lg-6 about-left-inner">
+                    <h3 th:text="#{tittle}">tiitle</h3>
+                    <p class="mt-4" th:text="#{quoteAbout}">quoteAbout</p>
+                </div>
+                <div class="col-lg-6 about-right-inner text-center mt-lg-0 mt-5">
+                    <img th:src="@{/images/candy_bar.jpg}" alt="candy bar" class="img-fluid img-border"/>
+                </div>
             </div>
-            <div class="col-lg-6 about-right-inner text-center mt-lg-0 mt-5">
-                <img th:src="@{/images/candy_bar.jpg}" alt="candy bar" class="img-fluid img-border"/>
+
+        </div>
+    </section>
+    <!-- //about -->
+
+    <!-- team -->
+    <section class="team py-5" id="team">
+        <div class="container pb-xl-5 pb-lg-3">
+            <h3 class="tittle text-center" th:text="#{weAre}">Our Team</h3>
+            <p class="sub-tittle text-center mt-3 mb-sm-5 mb-4" th:text="#{weAreAbout}">we are more</p>
+            <div class="row team-grid">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="box13">
+                        <img th:src="@{/images/aga.jpg}" class="img-fluid img-thumbnail" alt=""/>
+                        <div class="box-content">
+                            <h3 class="title">Agnieszka</h3>
+                            <span class="post" th:text="#{roleDekoratorka}">Role</span>
+                            <ul class="social">
+                                <li><a th:href="@{https://www.instagram.com/little_deco_things/}" target="_blank"><span
+                                        class='fab fa-instagram'></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mt-sm-0 mt-4">
+                    <div class="box13">
+                        <img th:src="@{/images/karola.jpg}" class="img-fluid img-thumbnail" alt=""/>
+                        <div class="box-content">
+                            <h3 class="title">Karolina</h3>
+                            <span class="post" th:text="#{roleDekoratorka}">Role</span>
+                            <ul class="social">
+                                <li><a th:href="@{https://www.instagram.com/kajjakowa/}" target="_blank"><span
+                                        class='fab fa-instagram'></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mt-lg-0 mt-4">
+                    <div class="box13">
+                        <img th:src="@{/images/paweł.jpg}" class="img-fluid img-thumbnail" alt=""/>
+                        <div class="box-content">
+                            <h3 class="title">Paweł</h3>
+                            <span class="post" th:text="#{roleHelper}">Role</span>
+                            <ul class="social">
+                                <li><a th:href="@{https://www.instagram.com/panbrelok/}" target="_blank"><span
+                                        class='fab fa-instagram'></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mt-lg-0 mt-4">
+                    <div class="box13">
+                        <img th:src="@{/images/wafel.jpg}" class="img-fluid img-thumbnail" alt=""/>
+                        <div class="box-content">
+                            <h3 class="title">Wafel</h3>
+                            <span class="post" th:text="#{roleDog}">Role</span>
+                            <ul class="social">
+                                <li><a th:href="@{https://www.instagram.com/the_mr_wafel/}" target="_blank"><span
+                                        class='fab fa-instagram'></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
-    </div>
-</section>
-<!-- //about -->
-
-<!-- team -->
-<section class="team py-5" id="team">
-    <div class="container pb-xl-5 pb-lg-3">
-        <h3 class="tittle text-center" th:text="#{weAre}">Our Team</h3>
-        <p class="sub-tittle text-center mt-3 mb-sm-5 mb-4" th:text="#{weAreAbout}">we are more</p>
-        <div class="row team-grid">
-            <div class="col-lg-3 col-sm-6">
-                <div class="box13">
-                    <img th:src="@{/images/aga.jpg}" class="img-fluid img-thumbnail" alt=""/>
-                    <div class="box-content">
-                        <h3 class="title">Agnieszka</h3>
-                        <span class="post" th:text="#{roleDekoratorka}">Role</span>
-                        <ul class="social">
-                            <li><a th:href="@{https://www.instagram.com/little_deco_things/}" target="_blank"><span
-                                    class='fab fa-instagram'></span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 mt-sm-0 mt-4">
-                <div class="box13">
-                    <img th:src="@{/images/karola.jpg}" class="img-fluid img-thumbnail" alt=""/>
-                    <div class="box-content">
-                        <h3 class="title">Karolina</h3>
-                        <span class="post" th:text="#{roleDekoratorka}">Role</span>
-                        <ul class="social">
-                            <li><a th:href="@{https://www.instagram.com/kajjakowa/}" target="_blank"><span
-                                    class='fab fa-instagram'></span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 mt-lg-0 mt-4">
-                <div class="box13">
-                    <img th:src="@{/images/paweł.jpg}" class="img-fluid img-thumbnail" alt=""/>
-                    <div class="box-content">
-                        <h3 class="title">Paweł</h3>
-                        <span class="post" th:text="#{roleHelper}">Role</span>
-                        <ul class="social">
-                            <li><a th:href="@{https://www.instagram.com/panbrelok/}" target="_blank"><span
-                                    class='fab fa-instagram'></span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 mt-lg-0 mt-4">
-                <div class="box13">
-                    <img th:src="@{/images/wafel.jpg}" class="img-fluid img-thumbnail" alt=""/>
-                    <div class="box-content">
-                        <h3 class="title">Wafel</h3>
-                        <span class="post" th:text="#{roleDog}">Role</span>
-                        <ul class="social">
-                            <li><a th:href="@{https://www.instagram.com/the_mr_wafel/}" target="_blank"><span
-                                    class='fab fa-instagram'></span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- //team -->
+    </section>
+    <!-- //team -->
 
 </section>
 <!-- //footer -->
