@@ -40,6 +40,14 @@ public class EmailService implements EmailSender {
     }
 
     public Context setFormToEmail(String name, String surname, String phoneNumber, String email, String subject, String date, String message) {
+
+            String phoneNumberTrim = phoneNumber.trim();
+            String partOne = phoneNumberTrim.substring(0, 3);
+            String partTwo = phoneNumberTrim.substring(3, 6);
+            String partThree = phoneNumberTrim.substring(6, 9);
+            String newPhoneNumber = partOne + "-" + partTwo + "-" + partThree;
+
+
         Context context = new Context();
         context.setVariable("header", "Nowa wiadomość z formularza");
         context.setVariable("title", subject);
@@ -48,7 +56,7 @@ public class EmailService implements EmailSender {
         context.setVariable("name", "Imię: " + name);
         context.setVariable("surname", "Nazwisko: " + surname);
         context.setVariable("email", "Email: " + email);
-        context.setVariable("phoneNumber", "Nr telefonu: " + phoneNumber);
+        context.setVariable("phoneNumber", "Nr telefonu: " + newPhoneNumber);
         return context;
 
     }
