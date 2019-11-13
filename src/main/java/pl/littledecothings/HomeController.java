@@ -15,18 +15,11 @@ import java.util.List;
 public class HomeController {
 
     private ProductToRentService productToRentService;
-    private TemplateEngine templateEngine;
-    private EmailSender emailSender;
 
-    public HomeController(ProductToRentService productToRentService, TemplateEngine templateEngine, EmailSender emailSender) {
+
+    public HomeController(ProductToRentService productToRentService) {
         this.productToRentService = productToRentService;
-        this.templateEngine = templateEngine;
-        this.emailSender = emailSender;
     }
-
-//    public HomeController(ProductToRentService productToRentService) {
-//        this.productToRentService = productToRentService;
-//    }
 
     @GetMapping
     public String home() {
@@ -35,12 +28,6 @@ public class HomeController {
 
     @GetMapping("/about")
     public String about() {
-         Context context = new Context();
-        context.setVariable("header", "Nowy artykuł na CodeCouple");
-        context.setVariable("title", "#8 Spring Boot – email - szablon i wysyłanie");
-        context.setVariable("description", "Tutaj jakis opis...");
-        String body = templateEngine.process("mail_template", context);
-        emailSender.sendEmail("brelok87@gmail.com", "CodeCouple Newsletter", body);
         return "about";
     }
 
