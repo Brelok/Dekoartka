@@ -1761,7 +1761,7 @@ h3.heading {
     font-weight: 400;
     color: #777;
     background-color: transparent;
-    text-transform: capitalize;
+    text-transform: none;
     background-image: none;
     letter-spacing: 1px;
     -webkit-appearance: none;
