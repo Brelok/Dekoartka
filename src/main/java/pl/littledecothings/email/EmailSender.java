@@ -1,4 +1,4 @@
-package pl.littledecothings.mail;
+package pl.littledecothings.email;
 
 public interface EmailSender {
 
