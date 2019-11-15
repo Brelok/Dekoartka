@@ -176,7 +176,7 @@ nav a {
     border: 1px solid rgba(255, 255, 255, 0.23);
     padding: 8px 16px;
     margin: 0 4px;
-    background: rgba(255, 253, 253, 0.13);
+    background: rgba(96, 96, 96, 0.6);
     font-weight: 400;
 }
 
@@ -187,7 +187,7 @@ nav a:hover {
 
 nav ul li ul li a:hover {
     color: #000;
-    background: #f8f9fa;
+    background: red;
     -webkit-transition: 0.5s all;
     -moz-transition: 0.5s all;
     -o-transition: 0.5s all;
@@ -226,6 +226,7 @@ nav ul ul {
 /* Display Dropdowns on Hover */
 nav ul li:hover > ul {
     display: inherit;
+
 }
 
 /* Fisrt Tier Dropdown */
@@ -470,7 +471,10 @@ p.logo {
 }
 
 .banner-text h1.banner-txt {
-    color: rgba(255, 255, 255, 0.3);
+    /*color: rgba(255, 255, 255, 0.3);*/
+    color: rgba(89, 52, 37, 0.8);
+    text-shadow: 1.2px 1.2px;
+    background-color:rgba(171,172,171, 0.1);
     font-weight: bold;
     letter-spacing: 2px;
     font-size: 2em;
@@ -1769,11 +1773,9 @@ h3.heading {
     border: 1px solid #ccc;
 }
 
-.check{
+.check {
     display: block
 }
-
-
 
 
 /* //responsive */
