@@ -1,4 +1,4 @@
-package pl.littledecothings.product;
+package pl.kwiatywlesie.product;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,6 +16,6 @@ public class ProductToRentService {
     }
 
     public ProductToRent findOne (Long id){
-        return productToRentRepository.findOne(id);
+        return productToRentRepository.getOne(id);
     }
 }

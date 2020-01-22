@@ -1,12 +1,12 @@
-package pl.littledecothings.form;
+package pl.kwiatywlesie.form;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
-import pl.littledecothings.email.EmailSender;
-import pl.littledecothings.email.EmailService;
+import pl.kwiatywlesie.email.EmailSender;
+import pl.kwiatywlesie.email.EmailService;
 
 @Controller
 public class FormController {

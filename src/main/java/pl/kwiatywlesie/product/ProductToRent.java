@@ -1,4 +1,4 @@
-package pl.littledecothings.product;
+package pl.kwiatywlesie.product;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

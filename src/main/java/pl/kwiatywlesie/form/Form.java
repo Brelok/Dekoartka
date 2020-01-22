@@ -1,16 +1,13 @@
-package pl.littledecothings.form;
+package pl.kwiatywlesie.form;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.validator.constraints.Email;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.Size;
 import java.util.Arrays;
 
 @Entity

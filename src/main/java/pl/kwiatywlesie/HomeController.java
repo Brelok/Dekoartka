@@ -1,11 +1,8 @@
-package pl.littledecothings;
+package pl.kwiatywlesie;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import org.thymeleaf.TemplateEngine;
-import org.thymeleaf.context.Context;
-import pl.littledecothings.email.EmailSender;
-import pl.littledecothings.product.ProductToRentService;
+import pl.kwiatywlesie.product.ProductToRentService;
 
 import java.util.ArrayList;
 import java.util.List;

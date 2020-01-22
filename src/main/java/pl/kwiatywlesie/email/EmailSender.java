@@ -1,4 +1,4 @@
-package pl.littledecothings.email;
+package pl.kwiatywlesie.email;
 
 public interface EmailSender {
 

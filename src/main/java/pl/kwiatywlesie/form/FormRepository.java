@@ -1,4 +1,4 @@
-package pl.littledecothings.form;
+package pl.kwiatywlesie.form;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
