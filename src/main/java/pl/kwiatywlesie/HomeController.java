@@ -2,7 +2,6 @@ package pl.kwiatywlesie;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import pl.kwiatywlesie.product.ProductToRentService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,12 +10,6 @@ import java.util.List;
 @RequestMapping("/")
 public class HomeController {
 
-    private ProductToRentService productToRentService;
-
-
-    public HomeController(ProductToRentService productToRentService) {
-        this.productToRentService = productToRentService;
-    }
 
     @GetMapping
     public String home() {
