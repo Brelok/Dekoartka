@@ -37,7 +37,7 @@ public class FormController {
         formService.add(form);
         Context context = emailService.setFormToEmail(name, surname, phoneNumber, email, subject, date, message);
         String body = templateEngine.process("mail_template", context);
-        emailSender.sendEmail("kontakt@kwiatywlesie.pl", subject, body);
+        emailSender.sendEmail("kwiatywlesie@kwiatywlesie.pl", subject, body);
         return "thankyou";
     }
 
