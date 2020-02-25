@@ -27,7 +27,7 @@ public class EmailService implements EmailSender {
         try {
             MimeMessageHelper helper = new MimeMessageHelper(mail, true);
             helper.setTo(to);
-            helper.setFrom("kontakt@kwiatywlesie.pl");
+            helper.setFrom("kwiatywlesie@kwiatywlesie.pl");
             helper.setSubject(subject);
             helper.setText(content, true);
 
