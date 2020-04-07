@@ -29,6 +29,7 @@ public class EmailService implements EmailSender {
             helper.setTo(to);
             helper.setFrom("kwiatywlesie@kwiatywlesie.pl");
             helper.setSubject(subject);
+            //some comment
             helper.setText(content, true);
 
         } catch (MessagingException e) {
